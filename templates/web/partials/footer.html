@@ -1,0 +1,74 @@
+{% load static %}
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-menu-wrap">
+                <div class="row gy-md-4 gy-5">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="footer-logo-and-addition-info">
+                            <a href="{% url "web:index" %}" class="footer-logo">
+                                <img src="{% static "web/_img/ogen_logo.png" %}" alt="" style="width: 154px;">
+                            </a>
+                            <div class="address-area">
+                                <span>Ogen Education & Migration</span>
+                                <a href="#">U A, Q BUSINESS CENTRE, West Hill, Kozhikode, Kerala 673005</a>
+                            </div>
+                            <ul class="social-list">
+                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/ogen-education-and-migration-opc-private-limited-50989b394/"><i class="bi bi-linkedin"></i></a></li>
+                                {% comment %} <li><a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a></li> {% endcomment %}
+                                <li><a href="https://www.instagram.com/ogen_education/?hl=en/"><i class="bi bi-instagram"></i></a></li>
+                                <li><a href="https://wa.me/+918606231000"><i class="bi bi-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-md-end">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5>Top Destinations</h5>
+                            </div>
+                            <ul class="widget-list">
+                                {% for top_destinations in top_destinations %}
+                                <li><a href="#">{{ top_destinations.title|truncatechars:20 }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-md-end">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5>Top Courses</h5>
+                            </div>
+                            <ul class="widget-list">
+                                {% for course in courses_list %}
+                                <li><a href="#">{{ course.title|truncatechars:20 }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 d-flex justify-content-lg-end">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5>Resources</h5>
+                            </div>
+                            <ul class="widget-list">
+                                <li><a href="#">About Ogen</a></li>
+                                <li><a href="#">Visa Processing</a></li>
+                                <li><a href="#">Accommodation</a></li>
+                                <li><a href="#">Pre-departure</a></li>
+                                <li><a href="#">Post-arrival</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-and-payment-method-area">
+                    <p>Copyright 2025 <a href="#">Ogen</a> | All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
